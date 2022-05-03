@@ -6,7 +6,7 @@ on:
       - "v*"
 
 jobs:
-  build:
+  run:
     name: Auto Release On New Tag
     runs-on: windows-latest
     steps:
