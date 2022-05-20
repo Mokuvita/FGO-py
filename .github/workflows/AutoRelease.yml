@@ -1,12 +1,10 @@
 name: Auto Release On New Tag
-
 on:
   push:
     tags:
       - "v*"
-
 jobs:
-  run:
+  main:
     name: Auto Release On New Tag
     runs-on: windows-latest
     steps:
@@ -27,7 +25,8 @@ jobs:
           7z a ../FGO-py.zip
           7z a ../FGO-py.7z -mx9
           tar -cvzf ../FGO-py.tar.gz *
-      - uses: marvinpinto/action-automatic-releases@latest
+      - name: Release
+        uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{secrets.GITHUB_TOKEN}}
           prerelease: false
