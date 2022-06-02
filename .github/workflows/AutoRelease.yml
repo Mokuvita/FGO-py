@@ -22,7 +22,6 @@ jobs:
       - name: Compress
         run: |
           cd dist
-          7z a ../FGO-py.zip
           7z a ../FGO-py.7z -mx9
           tar -cvzf ../FGO-py.tar.gz *
       - name: Release
@@ -31,6 +30,5 @@ jobs:
           repo_token: ${{secrets.GITHUB_TOKEN}}
           prerelease: false
           files: |
-            FGO-py.zip
             FGO-py.7z
             FGO-py.tar.gz
