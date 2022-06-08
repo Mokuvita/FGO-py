@@ -28,7 +28,7 @@ jobs:
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: ${{secrets.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}}
+          repo_token: ${{secrets.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}}
           prerelease: false
           files: |
             FGO-py.7z
