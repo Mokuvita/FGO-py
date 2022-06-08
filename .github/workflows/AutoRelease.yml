@@ -30,7 +30,7 @@ jobs:
         env:
           github_token: ${{secrets.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}}
         with:
-          repo-token: ${{secrets.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}}
+          repo_token: ${{secrets.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}}
           prerelease: false
           files: |
             FGO-py.7z
