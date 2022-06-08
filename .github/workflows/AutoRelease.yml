@@ -27,8 +27,6 @@ jobs:
           tar -cvzf ../FGO-py.tar.gz *
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
-        env:
-          github_token: ${{secrets.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}}
         with:
           repo_token: ${{secrets.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}}
           prerelease: false
