@@ -1,5 +1,6 @@
 name: Auto Release On New Tag
 on:
+  workflow_dispatch:
   push:
     tags:
       - "v*"
